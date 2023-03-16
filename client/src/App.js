@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -7,7 +6,7 @@ function App() {
 
   useEffect(() => {
     fetch('/time').then(res => res.json()).then(data => {
-      console.log (data);
+      console.log (data.time);
       setCurrentTime(data.time);
     });
   }, []);
